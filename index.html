@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="description" content="Hexagrow ver. 1.0 — Unity-WebGL-Spiel, Studentenprojekt der Hochschule Anhalt.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" type="image/x-icon" href="unity/TemplateData/favicon.ico">
+  <link rel="stylesheet" href="style.css">
+  <title>Hexagrow ver. 1.0</title>
+</head>
+<body>
+  <main>
+    <section class="card">
+      <h1>Hexagrow ver. 1.0</h1>
+
+      <p class="prose">
+        &bdquo;Hexagrow&ldquo; ist ein Gruppenprojekt aus dem Modul &bdquo;Spieleentwicklung&ldquo; an der Hochschule Anhalt.
+        Wir, Jamila Gr&auml;nzer, Ashly Fonseka und ich, haben im Zeitraum April bis September 2023 das Spiel
+        erschaffen. Es handelt sich lediglich um einen studentischen Prototypen und uns sind diverse Bugs bekannt.
+        Alle Inhalte von Design, Graphiken, Musik und Code wurden von uns drei ohne Drittanbieter erstellt.
+        Credits: Jamila &ndash; Musik, Ashly &ndash; Code, Jeremy &ndash; Code, Design &amp; Graphik.
+      </p>
+
+      <div id="unity-container">
+        <canvas id="unity-canvas" tabindex="-1"></canvas>
+        <div id="unity-loading-bar">
+          <div id="unity-logo"></div>
+          <div id="unity-progress-bar-empty">
+            <div id="unity-progress-bar-full"></div>
+          </div>
+          <p id="unity-loading-text">Wird geladen&hellip; (0&nbsp;%)</p>
+        </div>
+        <div id="unity-error" hidden></div>
+      </div>
+
+      <button id="unity-fullscreen-button" type="button" aria-label="Vollbild aktivieren" hidden>&gt; Fullscreen</button>
+
+      <h2>Anleitung</h2>
+      <p class="prose">
+        Steuerung:<br>
+        - Linke Maus / 1 Finger: Drag and Drop<br>
+        - Rechte Maus / 2 Finger: Map bewegen<br>
+        - Mausrad: Zoom<br>
+        <br>
+        Main-Men&uuml;:<br>
+        - Links Oben (Pflanze): Play<br>
+        - Links Unten (Joker): Einstellungen<br>
+        - Rechts Oben (Exit): Spiel beenden<br>
+        - Rechts Unten (Wagen): Shop<br>
+        - Mitte (Wasser): Ausl&ouml;sepunkt f&uuml;r Drag and Drop<br>
+        <br>
+        Spielstart:<br>
+        - die Pflanze ins Wasser ziehen<br>
+        - ziehe das gew&uuml;nschte Level (1&nbsp;&ndash;&nbsp;7) in das leere Feld<br>
+        <br>
+        Regeln:<br>
+        - ziehe eines der Tiles von den drei Tile-T&uuml;rmen in ein leeres Feld<br>
+        - Ziel ist es einen Pfad von Pflanze zum Wasser zu schaffen<br>
+        - du darfst von der Pflanze sowie vom Wasser aus starten<br>
+        - Barrieren k&ouml;nnen nur durch Joker (bspw. Schaufel) entfernt werden<br>
+        <br>
+        Bug-basierte Regeln (BBR):<br>
+        - Pfade d&uuml;rfen nicht in Barrieren (bspw. Knochen) enden: Niederlage trotz Sieg<br>
+        - Pfade d&uuml;rfen nicht ohne Anschluss-Pfad gelegt werden: Niederlage trotz Sieg<br>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <a href="https://legal.haaremy.de/impressum" rel="noopener">Impressum</a>
+    <span aria-hidden="true">&middot;</span>
+    <a href="https://legal.haaremy.de/datenschutz" rel="noopener">Datenschutz</a>
+  </footer>
+
+  <script src="unity/build.loader.js"></script>
+  <script src="hexagrow.js" defer></script>
+</body>
+</html>
