@@ -94,6 +94,7 @@ h2 { font-size: 1.5rem; margin-top: 2rem; }
   #unity-progress-bar-full { background-image: url("unity/TemplateData/progress-bar-full-dark.png"); }
 }
 
+#unity-error[hidden] { display: none; }
 #unity-error {
   position: absolute;
   inset: 0;
